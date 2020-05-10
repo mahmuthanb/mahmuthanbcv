@@ -1,0 +1,45 @@
+<clr-header class="header-6">
+    <div class="branding">
+        <a href="#" class="nav-link">
+            <clr-icon shape="code" class="is-inverse"></clr-icon>
+            <span class="title">MahmuthanB</span>
+        </a>
+    </div>
+    <div class="header-nav" [clr-nav-level]="1">
+        <a href="#about" class="nav-link"><span class="nav-text">About Me</span></a>
+        <a href="#education" class="nav-link"><span class="nav-text">Education</span></a>
+        <a href="#works" class="nav-link"><span class="nav-text">Work Experience</span></a>
+        <a href="#projects" class="nav-link"><span class="nav-text">Projects</span></a>
+        <a href="#skills" class="nav-link"><span class="nav-text">Skills</span></a>
+        <a href="#contact" class="nav-link"><span class="nav-text">Contact</span></a>
+    </div>
+    <div class="header-actions">
+        <clr-dropdown>
+            <button class="nav-icon" clrDropdownTrigger aria-label="toggle settings menu">
+                <clr-icon shape="printer"></clr-icon>
+                <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+                <a href="#" clrDropdownItem>PDF</a>
+                <a href="#" clrDropdownItem>Latex</a>
+                <a href="#" clrDropdownItem>Word</a>
+            </clr-dropdown-menu>
+        </clr-dropdown>
+        <a href="#" class="nav-link nav-icon" aria-label="settings">
+            <clr-icon shape="envelope"></clr-icon>
+        </a>
+        <a href="#" class="nav-link nav-icon" (click) = "basic = true" aria-label="settings">
+            <clr-icon shape="info-standart"></clr-icon>
+        </a>
+    </div>
+</clr-header>
+<clr-modal [(clrModalOpen)]="basic">
+    <h3 class="modal-title">About Portfolio</h3>
+    <div class="modal-body">
+        <p>This Portfolio fully developed in <a href="https://angular.io/" target="about_blank">Angular</a> with <a href="https://clarity.design/" target="about_blank">Clarity Design System UI Kit</a></p>
+        <p>You can check my repo in GitHub with this link.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="basic = false">Ok</button>
+    </div>
+</clr-modal>

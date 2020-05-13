@@ -1,25 +1,49 @@
+/* Main CSS */
 $breakpoint-tablet: 768px
+$about-bg-color : black
+$education-bg-color : orange
+$works-bg-color : lightblue
+$projects-bg-color : orangered
+$skills-bg-color : gold
+$contact-bg-color : green
+
+.fl-l
+    float: left
+.fl-r
+    float: right
+
+/* Font Sizing Starts*/
+
+$main-title-size : 55px
+
+/* Font Sizing Ends*/
+
+.section-title
+    font-size : $main-title-size
+    font-weight: bold
+
+/* About Section Starts */
 
 #about
     min-height : 200px
-    background-color: black
-
-.about
+    background-color: $about-bg-color
     padding:5% 5% 0 5% !important
-    color: white !important
 
+#about
+    .card
+        width: fit-content !important
+        margin-left: 25%
+        box-shadow: 0 0 0 0
+        border-style: none
+
+#about .card-img > img
+    height: 500px !important
+    width: auto !important
+    
 .content-area
     padding:0 !important
 
-.card
-    width: fit-content !important
-    margin-left: 25%
-    box-shadow: 0 0 0 0
-    border-style: none
 
-.card-img > img
-    height: 500px !important
-    width: auto !important
 
 .card-block > p,h1,h2,h3,h4,h5,h6
     color: white !important
@@ -29,11 +53,80 @@ $breakpoint-tablet: 768px
 .card-block .big-heading
     font-size: 75px
 
+/* About Section Ends*/
 
+/* Education Section Starts*/
 
 #education
-    height: 100% * 4/5
-    background-color: grey 
+    min-height: 100% * 4/5
+    background-color: $education-bg-color 
+    padding:5% 5% 0 5% !important
+
+
+/* Education Section Ends*/
+
+/* Works Section Starts*/
+
+#works
+    min-height: 100% * 4/5
+    background-color: $works-bg-color 
+    padding:5% 5% 0 5% !important
+
+#works
+    .card-footer
+        float: right
+        background-color: var(--clr-header-6-bg-color, #00364d)
+
+#works .card-footer > a
+    color: white
+
+#works .card-media-block .card-media-image
+    height: 2rem !important
+    width: auto !important
+    max-height: 3rem
+    max-width: 6rem
+
+/* Works Section Ends*/
+
+/* Projects Section Starts*/
+
+#projects
+    min-height: 100% * 4/5
+    background-color: $projects-bg-color 
+    padding:5% 5% 0 5% !important
+
+.project-info
+    padding: 1% 1% 2% 1%
+    display: inline-block
+
+#projects .info-text,
+#projects .card-text
+    color: gray !important
+
+#projects .info-text
+    margin-top: 0 !important
+
+
+/* Projects Section Ends*/
+
+/* Skills Section Starts*/
+
+#skills
+    min-height: 100% * 4/5
+    background-color: $skills-bg-color 
+    padding:5% 5% 0 5% !important
+
+/* Skills Section Ends*/
+
+/* Contact Section Starts*/
+
+#contact
+    min-height: 100% * 4/5
+    background-color: $contact-bg-color 
+    padding:5% 5% 0 5% !important
+
+/* Contact Section Ends*/
+
 
 
 @media (max-width: $breakpoint-tablet)

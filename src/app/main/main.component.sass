@@ -15,6 +15,7 @@ $contact-bg-color : green
 /* Font Sizing Starts*/
 
 $main-title-size : 55px
+$section-height: 95vh
 
 /* Font Sizing Ends*/
 
@@ -25,7 +26,7 @@ $main-title-size : 55px
 /* About Section Starts */
 
 #about
-    min-height : 200px
+    min-height : $section-height
     background-color: $about-bg-color
     padding:5% 5% 0 5% !important
 
@@ -43,8 +44,6 @@ $main-title-size : 55px
 .content-area
     padding:0 !important
 
-
-
 .card-block > p,h1,h2,h3,h4,h5,h6
     color: white !important
 .card-block .second-heading
@@ -58,9 +57,10 @@ $main-title-size : 55px
 /* Education Section Starts*/
 
 #education
-    min-height: 100% * 4/5
+    min-height: $section-height
     background-color: $education-bg-color 
     padding:5% 5% 0 5% !important
+    z-index: 3
 
 
 /* Education Section Ends*/
@@ -68,7 +68,7 @@ $main-title-size : 55px
 /* Works Section Starts*/
 
 #works
-    min-height: 100% * 4/5
+    min-height: $section-height
     background-color: $works-bg-color 
     padding:5% 5% 0 5% !important
 
@@ -91,7 +91,7 @@ $main-title-size : 55px
 /* Projects Section Starts*/
 
 #projects
-    min-height: 100% * 4/5
+    min-height: $section-height
     background-color: $projects-bg-color 
     padding:5% 5% 0 5% !important
 
@@ -112,7 +112,7 @@ $main-title-size : 55px
 /* Skills Section Starts*/
 
 #skills
-    min-height: 100% * 4/5
+    min-height: $section-height
     background-color: $skills-bg-color 
     padding:5% 5% 0 5% !important
 
@@ -121,7 +121,7 @@ $main-title-size : 55px
 /* Contact Section Starts*/
 
 #contact
-    min-height: 100% * 4/5
+    min-height: $section-height
     background-color: $contact-bg-color 
     padding:5% 5% 0 5% !important
 
@@ -133,14 +133,37 @@ $main-title-size : 55px
     .about
         padding:15px !important
         color: white !important
+        background-image: url('../../assets/me.jpg') no-repeat
+    
+    .first
+        /* position: absolute */
+        /* z-index: 2 */
+    .about .second
+        /* position: absolute */
+        /* opacity: 50% */
+        /* z-index: 1 */
+        display: none
+    .about .clr-row .clr-col-12
+        padding-left: 0 !important
+        padding-right: 0 !important
+    .about .first
+        padding-top: 20%
     .card
         width: fit-content !important
         margin: 5% !important
     .card-img > img
         height: 150px !important
         width: auto !important
-    .card-block .big-heading
-        font-size: 45px
-    .card-block .second-heading
-        font-size: 20px
-        margin-top: 0px !important
+    .section-title 
+        font-size : $main-title-size * 0.5
+    .big-heading
+        font-size: 90px !important
+        text-align: center !important
+        padding-top: 35px !important
+        padding-bottom: 15px !important
+    .second-heading
+        font-size: 33px !important
+        text-align: center !important
+        margin-top: 5px !important
+    .card-block .card-text
+        text-align: justify !important
